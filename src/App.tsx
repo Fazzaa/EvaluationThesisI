@@ -205,55 +205,32 @@ function App() {
                     </button>
                 </div>
                 :
-                !middleVsAdvancedShown ?
-                    <div className="text-center mt-8 max-w-3xl mx-auto">
-                        <MiddleVsAdvanced/>
-                        <button
-                            className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 shadow-lg"
-                            onClick={() => setMiddleVsAdvancedShown(true)}
-                        >
-                            Proceed
-                        </button>
-                    </div>
-                    :
-                    !videoWatched ?
-                        <div className="flex flex-col items-center justify-center h-screen w-screen">
-                            <Video url={"https://www.evilscript.eu/files/spiegazione-dicaro.mp4"}/>
+                <div>
+                    {<TopBanner
+                        text={"Remember that with your username you can always resume the session where you left"}/>}
+                    {<MadeByMe/>}
+                    <div className="text-center mt-12">
+                        <div className="text-4xl font-bold">Ready to get bored?</div>
+                        <div className="text-2xl mt-4">Please enter your name to start</div>
+                        <div>
+                            <input
+                                value={name}
+                                onChange={e => setName(e.target.value.toLowerCase())}
+                                onKeyDown={handleStart}
+                                className="rounded-lg shadow-lg p-2 border border-gray-400 mt-4"
+                                placeholder="Type your name here..."
+                            />
+                        </div>
+                        <div>
                             <button
-                                className="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 shadow-lg"
-                                onClick={() => setVideoWatched(!videoWatched)}
+                                className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 shadow-lg"
+                                onClick={handleStart}
                             >
-                                Skip
+                                Start
                             </button>
                         </div>
-                        :
-                        <div>
-                            {<TopBanner
-                                text={"Remember that with your username you can always resume the session where you left"}/>}
-                            {<MadeByMe/>}
-                            <div className="text-center mt-12">
-                                <div className="text-4xl font-bold">Ready to get bored?</div>
-                                <div className="text-2xl mt-4">Please enter your name to start</div>
-                                <div>
-                                    <input
-                                        value={name}
-                                        onChange={e => setName(e.target.value.toLowerCase())}
-                                        onKeyDown={handleStart}
-                                        className="rounded-lg shadow-lg p-2 border border-gray-400 mt-4"
-                                        placeholder="Type your name here..."
-                                    />
-                                </div>
-                                <div>
-                                    <button
-                                        className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 shadow-lg"
-                                        onClick={handleStart}
-                                    >
-                                        Start
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
+                    </div>
+                </div>
             : <div>
                 <div className="text-center justify-center mt-12">
                     {<MadeByMe/>}
