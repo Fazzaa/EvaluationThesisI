@@ -263,7 +263,7 @@ function App() {
                     Non sono sicuro
                 </button>
                 </div>
-                /*<div className="flex justify-center mt-4">
+                <div className="flex justify-center mt-4">
                     <p>
                         Was this <a href="#"
                                     className="text-blue-600 hover:text-blue-700 cursor-default"
@@ -272,7 +272,7 @@ function App() {
                     </p>
                     <input id="hard-checkbox" type="checkbox"
                            className="ml-2 h-6 w-6 rounded-full shadow checked:shadow-xl cursor-pointer"/>
-                </div>*/
+                </div>
                 {isDownloaded && dataset ? <div className="flex justify-center mt-8 max-w-2xl mx-auto">
                     <div id={"progress-bar"}
                          className="bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-l-full"
