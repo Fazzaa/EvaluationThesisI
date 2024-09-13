@@ -248,7 +248,7 @@ function App() {
                             onClick={() => onClick("Si")}
                             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 shadow-lg disabled:bg-gray-500"
                             disabled={isLoading}>
-                        Si
+                        Yes
                     </button>
                     <button id="no-button"
                             onClick={() => onClick("No")}
@@ -260,7 +260,7 @@ function App() {
                         onClick={() => onClick("Non sono sicuro")}
                         className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full ml-4 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 shadow-lg disabled:bg-gray-500"
                         disabled={isLoading}>
-                    Non sono sicuro
+                    Not sure
                 </button>
                 </div>
                 <div className="flex justify-center mt-4">
